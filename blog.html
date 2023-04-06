@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center w-9/12 mx-auto">
+            <div class="text-zinc-800 font-bold uppercase">
+                <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+                <p class="text-[10px] font-normal capitalize -mt-1">
+                    Get ready to Quiz and be amazed!
+                </p>
+            </div>
+            <button class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+                <a href="./index.html">Home</a>
+            </button>
+        </nav>
+    </header>
+
+    <!-- body -->
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:px-24 px-8 mt-16">
+        <!-- card section -->
+        <div class="flex flex-col  rounded border-2 bg-slate-200 p-5">
+            <h1 class="font-bold">What's the difference between map, filter, foreach, and find?</h1>
+        </div>
+        <div class="flex flex-col  rounded border-2 bg-[#1090f61a] p-5">
+            <h1 class="font-medium ">Answer: <br>
+                map creates a new array by calling a function for every array element. <br>
+                filter creates a new array filled with elements that pass a test provided by a function. <br>
+                forEach provides a callback function once for each element in an array in ascending-index order. <br>
+                find returns the value of the first element that passes a test. <br>
+            </h1>
+        </div>
+
+
+        <div class="flex flex-col  rounded border-2 bg-slate-200 p-5">
+            <h1 class="font-bold">What's the difference between local storage, session storage, and cookies?</h1>
+        </div>
+        <div class="flex flex-col  rounded border-2 bg-[#1090f61a] p-5">
+            <h1 class="font-medium">Answer: <br>
+                Local storage: It allows for larger amounts of data to be stored, but the data is not deleted when the
+                browser is closed. Local storage is useful for storing data that the user will need to access later,
+                such as offline data. <br> <br>
+
+                Session storage: is similar to cookies, but the data is only stored for the current session. This means
+                that the data will be deleted when the user closes the browser. Session storage is useful for storing
+                data that is sensitive, such as login credentials. <br> <br>
+
+                Cookies: are the oldest and most well-known mechanism. They are simple to use and well supported by
+                browsers. However, they are limited to 4KB of data and are often used to store data that is not
+                sensitive, such as user preferences.
+
+            </h1>
+        </div>
+
+
+        <div class="flex flex-col  rounded border-2 bg-slate-200 p-5">
+            <h1 class="font-bold">what is event loop?</h1>
+        </div>
+        <div class="flex flex-col  rounded border-2 bg-[#1090f61a] p-5">
+            <h1 class="font-medium">Answer: <br>
+                JavaScript has a runtime model based on an event loop, which is responsible for executing the code,
+                collecting and processing events, and executing queued sub-tasks
+
+            </h1>
+        </div>
+
+
+        <div class="flex flex-col  rounded border-2 bg-slate-200 p-5">
+            <h1 class="font-bold">Explain quizTimer:</h1>
+        </div>
+        <div class="flex flex-col  rounded border-2 bg-[#1090f61a] p-5">
+            <h1 class="font-medium">Answer: <br>
+                If start quiz button is clicked then quizTimer function will be called and this function shows the time Countdown in quiz page. <br> <br>
+
+                The 'quizTimer' function is responsible for handling the countdown timer in the quiz app. The function
+                takes a single argument, 'dismiss', which is a boolean value that is used to determine whether to clear
+                the interval timer or not. <br> <br>
+
+                Inside the function, an interval timer is created using the 'setInterval' method, which runs every
+                second to update the timer on the screen. The current count of the timer is first converted into minutes
+                and seconds, which are then displayed on the screen. <br> <br>
+
+                Additionally, the function also changes the color of the timer text to red after every 60 seconds, as a
+                visual indicator to the user. Finally, the 'clearInterval' method is called to stop the timer when the
+                'dismiss' parameter is true.
+
+            </h1>
+        </div>
+
+
+        <div class="flex flex-col  rounded border-2 bg-slate-200 p-5">
+            <h1 class="font-bold">Explain chooseQuiz:</h1>
+        </div>
+        <div class="flex flex-col  rounded border-2 bg-[#1090f61a] p-5">
+            <h1 class="font-medium">Answer: <br>
+
+                This function will take given answer and index as parameter. Then it will check the answer with correct answers and then call the displayAnswers function and pass the answers as parameter to show which answer is selected. <br> <br>
+                The chooseQuiz function takes two arguments: index and givenAns. <br> <br>
+
+                The index argument is an integer that represents the index of the quiz question in the quizData array
+                that the user has chosen to answer. <br> <br>
+
+                The givenAns argument is the answer that the user has provided for that particular question. <br> <br>
+
+                The function first checks if the user has already answered the question by searching for an object in
+                the answers array that has the same id as the current quiz question. If such an object is found, the
+                function updates the answer for that question in the answers array. <br> <br>
+
+                If the user has not answered the question before, the function adds a new object to the answers array
+                with the id and givenAns properties of the current quiz question. <br> <br>
+
+                Finally, the function calls the displayAnswers function with the answers array as an argument, which
+                displays all the quiz questions with their corresponding answers.
+
+            </h1>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
